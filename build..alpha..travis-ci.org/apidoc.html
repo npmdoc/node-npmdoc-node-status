@@ -1,0 +1,932 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/derrickpelletier/node-status.git"
+
+    >node-status (v1.0.0)</a>
+</h1>
+<h4>A live status bar generator for node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status">module node-status</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.addItem">
+            function <span class="apidocSignatureSpan">node-status.</span>addItem
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.cellCount">
+            function <span class="apidocSignatureSpan">node-status.</span>cellCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.clear">
+            function <span class="apidocSignatureSpan">node-status.</span>clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.console">
+            function <span class="apidocSignatureSpan">node-status.</span>console
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.removeAll">
+            function <span class="apidocSignatureSpan">node-status.</span>removeAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.removeItem">
+            function <span class="apidocSignatureSpan">node-status.</span>removeItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.setPattern">
+            function <span class="apidocSignatureSpan">node-status.</span>setPattern
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.stamp">
+            function <span class="apidocSignatureSpan">node-status.</span>stamp
+            <span class="apidocSignatureSpan">(withPattern)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.start">
+            function <span class="apidocSignatureSpan">node-status.</span>start
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.stop">
+            function <span class="apidocSignatureSpan">node-status.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.addItem">module node-status.addItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.addItem.addItem">
+            function <span class="apidocSignatureSpan">node-status.</span>addItem
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.cellCount">module node-status.cellCount</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.cellCount.cellCount">
+            function <span class="apidocSignatureSpan">node-status.</span>cellCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.clear">module node-status.clear</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.clear.clear">
+            function <span class="apidocSignatureSpan">node-status.</span>clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.console">module node-status.console</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.console.console">
+            function <span class="apidocSignatureSpan">node-status.</span>console
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.removeAll">module node-status.removeAll</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.removeAll.removeAll">
+            function <span class="apidocSignatureSpan">node-status.</span>removeAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.removeItem">module node-status.removeItem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.removeItem.removeItem">
+            function <span class="apidocSignatureSpan">node-status.</span>removeItem
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.setPattern">module node-status.setPattern</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.setPattern.setPattern">
+            function <span class="apidocSignatureSpan">node-status.</span>setPattern
+            <span class="apidocSignatureSpan">(pattern)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.stamp">module node-status.stamp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.stamp.stamp">
+            function <span class="apidocSignatureSpan">node-status.</span>stamp
+            <span class="apidocSignatureSpan">(withPattern)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.start">module node-status.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.start.start">
+            function <span class="apidocSignatureSpan">node-status.</span>start
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-status.stop">module node-status.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-status.stop.stop">
+            function <span class="apidocSignatureSpan">node-status.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status" id="apidoc.module.node-status">module node-status</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.addItem" id="apidoc.element.node-status.addItem">
+        function <span class="apidocSignatureSpan">node-status.</span>addItem
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(name, options) =&#x3e; {
+  if(!name || typeof name !== &#x27;string&#x27;) return null;
+  options = options || {};
+  options.name = name;
+  var item = new Item(options);
+  items[name] = item;
+  rebuildPattern();
+  return items[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example of steps
+![image](https://d17oy1vhnax1f7.cloudfront.net/items/2S0x2U0S0L1r3a441O1Q/Screen%20Recording%202016-08-23%20at%2012.37%20PM.gif)
+
+## Quickstart
+```javascript
+var status = require(&#x27;node-status&#x27;)
+var pizzas = status.<span class="apidocCodeKeywordSpan">addItem</span>(&#x27;pizza&#x27;)
+
+status.start()
+
+pizzas.inc()
+pizzas.inc(3)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.cellCount" id="apidoc.element.node-status.cellCount">
+        function <span class="apidocSignatureSpan">node-status.</span>cellCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; Object.keys(items).length</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+  expect(item).to.be.null
+  expect(status.<span class="apidocCodeKeywordSpan">cellCount</span>()).to.equal(0)
+})
+
+it(&#x27;should instantiate with just a name&#x27;, function () {
+  var item = status.addItem(&#x27;just a name&#x27;)
+  expect(item).to.be.not.null
+  expect(item.name).to.equal(&#x27;just a name&#x27;)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.clear" id="apidoc.element.node-status.clear">
+        function <span class="apidocSignatureSpan">node-status.</span>clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.toString = () =&#x3e; generateBar();
+exports.clear = () =&#x3e; charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;);
+
+exports.console = function () {
+  var methods = {};
+  [&#x27;log&#x27;, &#x27;info&#x27;, &#x27;error&#x27;, &#x27;warn&#x27;].forEach(m =&#x3e; {
+    methods[m] = function () {
+      if(m !== &#x27;log&#x27; || running) exports.<span class="apidocCodeKeywordSpan">clear</span>();
+      console[m].apply(this, arguments);
+      if(running) render();
+    }
+  });
+  return methods;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.console" id="apidoc.element.node-status.console">
+        function <span class="apidocSignatureSpan">node-status.</span>console
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">console = function () {
+  var methods = {};
+  [&#x27;log&#x27;, &#x27;info&#x27;, &#x27;error&#x27;, &#x27;warn&#x27;].forEach(m =&#x3e; {
+    methods[m] = function () {
+      if(m !== &#x27;log&#x27; || running) exports.clear();
+      console[m].apply(this, arguments);
+      if(running) render();
+    }
+  });
+  return methods;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Using Console.log alongside status
+Right now, if you have to use `console.log` after the status bar has started, it can be a bit janky because the stdout line isn&#
+x27;t cleared when a console.log is run.
+
+You can utilize an extended console.log by adding this after requiring status.
+```javascript
+console = status.<span class="apidocCodeKeywordSpan">console</span>()
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.removeAll" id="apidoc.element.node-status.removeAll">
+        function <span class="apidocSignatureSpan">node-status.</span>removeAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  items = {};
+  rebuildPattern();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var regex = {
+start: /^Status @ [0-9]+s  \|/
+}
+
+beforeEach(function () {
+status.<span class="apidocCodeKeywordSpan">removeAll</span>()
+status.setPattern(null)
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.removeItem" id="apidoc.element.node-status.removeItem">
+        function <span class="apidocSignatureSpan">node-status.</span>removeItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(item) =&#x3e; {
+  if(typeof item === &#x27;string&#x27;) {
+    delete items[item];
+  } else if(item instanceof Item) {
+    delete items[item.name];
+  }
+  rebuildPattern();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+describe(&#x27;Removing items&#x27;, function () {
+
+it(&#x27;should remove a single item&#x27;, function () {
+  var item = status.addItem(&#x27;item&#x27;)
+  var item2 = status.addItem(&#x27;item2&#x27;)
+
+  expect(status.cellCount()).to.equal(2)
+  status.<span class="apidocCodeKeywordSpan">removeItem</span>(item)
+
+  expect(status.cellCount()).to.equal(1)
+  status.removeItem(&#x27;item2&#x27;)
+
+  expect(status.cellCount()).to.equal(0)
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.setPattern" id="apidoc.element.node-status.setPattern">
+        function <span class="apidocSignatureSpan">node-status.</span>setPattern
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(pattern) =&#x3e; settings.pattern = pattern</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var regex = {
+start: /^Status @ [0-9]+s  \|/
+}
+
+beforeEach(function () {
+status.removeAll()
+status.<span class="apidocCodeKeywordSpan">setPattern</span>(null)
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+  expect(item).to.be.null
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.stamp" id="apidoc.element.node-status.stamp">
+        function <span class="apidocSignatureSpan">node-status.</span>stamp
+        <span class="apidocSignatureSpan">(withPattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(withPattern) =&#x3e; {
+  charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;);
+  return console.log(generateBar(withPattern));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.start" id="apidoc.element.node-status.start">
+        function <span class="apidocSignatureSpan">node-status.</span>start
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(opts) =&#x3e; {
+  settings = Object.assign(settings, opts)
+  running = true;
+  if(!settings.bottom) cliCursor.hide();
+  render();
+  looper = setInterval(render, settings.interval);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+![image](https://d17oy1vhnax1f7.cloudfront.net/items/2S0x2U0S0L1r3a441O1Q/Screen%20Recording%202016-08-23%20at%2012.37%20PM.gif)
+
+## Quickstart
+```javascript
+var status = require(&#x27;node-status&#x27;)
+var pizzas = status.addItem(&#x27;pizza&#x27;)
+
+status.<span class="apidocCodeKeywordSpan">start</span>()
+
+pizzas.inc()
+pizzas.inc(3)
+```
+
+## Config
+Status accepts the following config options on `start()`:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.stop" id="apidoc.element.node-status.stop">
+        function <span class="apidocSignatureSpan">node-status.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  running = false;
+  clearTimeout(looper);
+  cliCursor.show();
+  charm.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.addItem" id="apidoc.module.node-status.addItem">module node-status.addItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.addItem.addItem" id="apidoc.element.node-status.addItem.addItem">
+        function <span class="apidocSignatureSpan">node-status.</span>addItem
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(name, options) =&#x3e; {
+  if(!name || typeof name !== &#x27;string&#x27;) return null;
+  options = options || {};
+  options.name = name;
+  var item = new Item(options);
+  items[name] = item;
+  rebuildPattern();
+  return items[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example of steps
+![image](https://d17oy1vhnax1f7.cloudfront.net/items/2S0x2U0S0L1r3a441O1Q/Screen%20Recording%202016-08-23%20at%2012.37%20PM.gif)
+
+## Quickstart
+```javascript
+var status = require(&#x27;node-status&#x27;)
+var pizzas = status.<span class="apidocCodeKeywordSpan">addItem</span>(&#x27;pizza&#x27;)
+
+status.start()
+
+pizzas.inc()
+pizzas.inc(3)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.cellCount" id="apidoc.module.node-status.cellCount">module node-status.cellCount</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.cellCount.cellCount" id="apidoc.element.node-status.cellCount.cellCount">
+        function <span class="apidocSignatureSpan">node-status.</span>cellCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; Object.keys(items).length</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+  expect(item).to.be.null
+  expect(status.<span class="apidocCodeKeywordSpan">cellCount</span>()).to.equal(0)
+})
+
+it(&#x27;should instantiate with just a name&#x27;, function () {
+  var item = status.addItem(&#x27;just a name&#x27;)
+  expect(item).to.be.not.null
+  expect(item.name).to.equal(&#x27;just a name&#x27;)
+})
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.clear" id="apidoc.module.node-status.clear">module node-status.clear</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.clear.clear" id="apidoc.element.node-status.clear.clear">
+        function <span class="apidocSignatureSpan">node-status.</span>clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;)</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.toString = () =&#x3e; generateBar();
+exports.clear = () =&#x3e; charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;);
+
+exports.console = function () {
+  var methods = {};
+  [&#x27;log&#x27;, &#x27;info&#x27;, &#x27;error&#x27;, &#x27;warn&#x27;].forEach(m =&#x3e; {
+    methods[m] = function () {
+      if(m !== &#x27;log&#x27; || running) exports.<span class="apidocCodeKeywordSpan">clear</span>();
+      console[m].apply(this, arguments);
+      if(running) render();
+    }
+  });
+  return methods;
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.console" id="apidoc.module.node-status.console">module node-status.console</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.console.console" id="apidoc.element.node-status.console.console">
+        function <span class="apidocSignatureSpan">node-status.</span>console
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">console = function () {
+  var methods = {};
+  [&#x27;log&#x27;, &#x27;info&#x27;, &#x27;error&#x27;, &#x27;warn&#x27;].forEach(m =&#x3e; {
+    methods[m] = function () {
+      if(m !== &#x27;log&#x27; || running) exports.clear();
+      console[m].apply(this, arguments);
+      if(running) render();
+    }
+  });
+  return methods;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+## Using Console.log alongside status
+Right now, if you have to use `console.log` after the status bar has started, it can be a bit janky because the stdout line isn&#
+x27;t cleared when a console.log is run.
+
+You can utilize an extended console.log by adding this after requiring status.
+```javascript
+console = status.<span class="apidocCodeKeywordSpan">console</span>()
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.removeAll" id="apidoc.module.node-status.removeAll">module node-status.removeAll</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.removeAll.removeAll" id="apidoc.element.node-status.removeAll.removeAll">
+        function <span class="apidocSignatureSpan">node-status.</span>removeAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  items = {};
+  rebuildPattern();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var regex = {
+start: /^Status @ [0-9]+s  \|/
+}
+
+beforeEach(function () {
+status.<span class="apidocCodeKeywordSpan">removeAll</span>()
+status.setPattern(null)
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.removeItem" id="apidoc.module.node-status.removeItem">module node-status.removeItem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.removeItem.removeItem" id="apidoc.element.node-status.removeItem.removeItem">
+        function <span class="apidocSignatureSpan">node-status.</span>removeItem
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(item) =&#x3e; {
+  if(typeof item === &#x27;string&#x27;) {
+    delete items[item];
+  } else if(item instanceof Item) {
+    delete items[item.name];
+  }
+  rebuildPattern();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+describe(&#x27;Removing items&#x27;, function () {
+
+it(&#x27;should remove a single item&#x27;, function () {
+  var item = status.addItem(&#x27;item&#x27;)
+  var item2 = status.addItem(&#x27;item2&#x27;)
+
+  expect(status.cellCount()).to.equal(2)
+  status.<span class="apidocCodeKeywordSpan">removeItem</span>(item)
+
+  expect(status.cellCount()).to.equal(1)
+  status.removeItem(&#x27;item2&#x27;)
+
+  expect(status.cellCount()).to.equal(0)
+})
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.setPattern" id="apidoc.module.node-status.setPattern">module node-status.setPattern</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.setPattern.setPattern" id="apidoc.element.node-status.setPattern.setPattern">
+        function <span class="apidocSignatureSpan">node-status.</span>setPattern
+        <span class="apidocSignatureSpan">(pattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(pattern) =&#x3e; settings.pattern = pattern</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var regex = {
+start: /^Status @ [0-9]+s  \|/
+}
+
+beforeEach(function () {
+status.removeAll()
+status.<span class="apidocCodeKeywordSpan">setPattern</span>(null)
+})
+
+describe(&#x27;Creating an item&#x27;, function () {
+
+it(&#x27;should not create an item when no parameters&#x27;, function () {
+  var item = status.addItem()
+  expect(item).to.be.null
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.stamp" id="apidoc.module.node-status.stamp">module node-status.stamp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.stamp.stamp" id="apidoc.element.node-status.stamp.stamp">
+        function <span class="apidocSignatureSpan">node-status.</span>stamp
+        <span class="apidocSignatureSpan">(withPattern)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(withPattern) =&#x3e; {
+  charm.erase(&#x27;line&#x27;).erase(&#x27;down&#x27;);
+  return console.log(generateBar(withPattern));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.start" id="apidoc.module.node-status.start">module node-status.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.start.start" id="apidoc.element.node-status.start.start">
+        function <span class="apidocSignatureSpan">node-status.</span>start
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(opts) =&#x3e; {
+  settings = Object.assign(settings, opts)
+  running = true;
+  if(!settings.bottom) cliCursor.hide();
+  render();
+  looper = setInterval(render, settings.interval);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+![image](https://d17oy1vhnax1f7.cloudfront.net/items/2S0x2U0S0L1r3a441O1Q/Screen%20Recording%202016-08-23%20at%2012.37%20PM.gif)
+
+## Quickstart
+```javascript
+var status = require(&#x27;node-status&#x27;)
+var pizzas = status.addItem(&#x27;pizza&#x27;)
+
+status.<span class="apidocCodeKeywordSpan">start</span>()
+
+pizzas.inc()
+pizzas.inc(3)
+```
+
+## Config
+Status accepts the following config options on `start()`:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-status.stop" id="apidoc.module.node-status.stop">module node-status.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-status.stop.stop" id="apidoc.element.node-status.stop.stop">
+        function <span class="apidocSignatureSpan">node-status.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  running = false;
+  clearTimeout(looper);
+  cliCursor.show();
+  charm.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
