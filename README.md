@@ -1,4 +1,7 @@
-# api documentation for  [node-status (v1.0.0)](http://github.com/derrickpelletier/node-status.git)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-status.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-status) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-status.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-status)
+# npmdoc-node-status
+
+#### basic api documentation for  [node-status (v1.0.0)](http://github.com/derrickpelletier/node-status.git)  [![npm package](https://img.shields.io/npm/v/npmdoc-node-status.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-node-status) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-node-status.svg)](https://travis-ci.org/npmdoc/node-npmdoc-node-status)
+
 #### A live status bar generator for node.js
 
 [![NPM](https://nodei.co/npm/node-status.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-status)
@@ -69,7 +72,8 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
